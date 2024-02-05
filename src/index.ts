@@ -14,6 +14,7 @@ const port = 8080;
 app.use(helmet());
 
 app.get('/get-sample', (req, res, next) => {
+  console.log("test");
   getSample(req, res).catch(next);
 });
 
