@@ -7,5 +7,5 @@ export const summarizationAndCategorization = async (files: Express.Multer.File,
   const convertedText = await fromFile(files);
   const summarizedText = await summarizeText(convertedText);
   const categorizedText = await categorizeText(summarizedText);
-  return res.status(200).json(categorizedText);
+  return res.status(200).json({ convertedText, summarizedText, categorizedText });
 };
